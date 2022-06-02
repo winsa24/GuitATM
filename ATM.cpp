@@ -48,7 +48,7 @@ ATM::ATM() : GWindow("#code-edit") {
     << ".clock .buttonbox {size: auto 7ch; align: center stretch}"
     << ".label .buttonbox .set-btn {size:6ch; font:bold}";
 
-    auto mesg = Text("Welcom");
+    auto mesg = Label("Welcom");
     auto hasCard = false;
     auto screen = Box("#screen")
         << mesg;
@@ -80,7 +80,15 @@ ATM::ATM() : GWindow("#code-edit") {
                 << (Button(".label CARD") << en
 //                    << (~hasCard == true)  / *en = false
 //                    << On(~hasCard == false) / "<c=blue> Deselected"
-                    << On.click / [=](GMouseEvent* e){ *mesg = "Card Inserted"; *en = false;}
+                    << On.click
+                    / [=](GMouseEvent* e){ *en = false;}
+                    / [=]{ *mesg = "<color=green> Card Inserted"; }
+
+                    // waits for 1 second whitout blocking the event loop
+                    / SleepFor(2000)
+
+                    // done once the delay is over
+                    / [=]{ *mesg = "<color=blue> Enter Password"; }
                         << Box()
                    )
                 )
