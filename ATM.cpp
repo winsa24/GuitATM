@@ -48,21 +48,29 @@ ATM::ATM() : GWindow("#code-edit") {
     << ".clock .buttonbox {size: auto 7ch; align: center stretch}"
     << ".label .buttonbox .set-btn {size:6ch; font:bold}";
 
+    auto userPsw = "13579";
+    
     auto mesg = Label("Welcom");
-    auto hasCard = false;
+    auto psw = Text();
+//    char* psw = "";
+    auto hasCard = Bool(false);
     auto screen = Box("#screen")
-        << mesg;
+        << mesg
+        << psw;
     
     auto bg = Background("pink");
     auto bd = Border("rounded");
     
-
     auto en = Enabled(true);
+    
+    auto wrongCount = Int(0);
     
   // main box
   *this
     << QuitDialog("Quit","Changes will be lost", &changed)
     << (VBox(".window")
+//        << On(~hasCard == false)  / (*en = true)
+        << On(~wrongCount > 3)  / (*en = true)
         << Label(".label ATM ")
         << (HBox()
             << (VBox()
@@ -78,10 +86,10 @@ ATM::ATM() : GWindow("#code-edit") {
                     << On.click / [=](GMouseEvent* e){ *mesg = "Print RECEIPT"; }
                     )
                 << (Button(".label CARD") << en
-//                    << (~hasCard == true)  / *en = false
-//                    << On(~hasCard == false) / "<c=blue> Deselected"
+                    << On(~hasCard == true)  / (*en = false)
+                    << On(~hasCard == false) / (*en = true)
                     << On.click
-                    / [=](GMouseEvent* e){ *en = false;}
+                    / [=](GMouseEvent* e){ *hasCard = true;}
                     / [=]{ *mesg = "<color=green> Card Inserted"; }
 
                     // waits for 1 second whitout blocking the event loop
@@ -99,12 +107,29 @@ ATM::ATM() : GWindow("#code-edit") {
 //          << (VBox(".nobtn") << Button("3") << Button("6") << Button("9") << Button("#"))
 //          << (VBox() << Button("CANCEL") << Button("CLEAR") << Button("ENTER") << Button())
 //        )
-        << (Box("#keyboard {flow: grid 4}")
-            << Button("1") << Button("2") << Button("3") << Button("CANCEL")
-            << Button("4") << Button("5") << Button("6") << (Button("CLEAR") << bg)
-            << Button("7") << Button("8") << Button("9") << (Button("ENTER") << Background("green"))
-            << Button("*") << Button("0") << Button("#") << Button()
+        << (HBox("#keyboard {align: stretch stretch;}")
+            << (Box("#noboard {flow: grid 3}")
+                << [=](auto e){ *psw += e->child()->textValue();}
+                << Button("1") << Button("2") << Button("3")
+                << Button("4") << Button("5") << Button("6")
+                << Button("7") << Button("8") << Button("9")
+                << Button("*") << Button("0") << Button("#")
+                )
+            << (Box("#funboard {flow: grid 1}")
+                << (Button("CANCEL") << Background("yellow") << [=](auto e){ psw->erase(psw->stringValue().size() - 1, 1); })
+                << (Button("CLEAR") << bg << [=](auto e){ *psw = ""; })
+                << (Button("ENTER") << Background("green")
+                    << [=](auto e){
+                            if(psw->stringValue() == userPsw) { *mesg = "<color=green> Login Successfully"; }
+                            else { ++ wrongCount;
+                                *mesg = "<color=red> Wrong Password";
+                                screen << "Left " + (4 - ~wrongCount) + " Attempts";
+                            }
+                        })
+                << Button("")
+                )
             )
+        
     );
   
   makeInternal();   // disable inspection
