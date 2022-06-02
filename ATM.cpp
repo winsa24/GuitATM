@@ -53,6 +53,12 @@ ATM::ATM() : GWindow("#code-edit") {
     auto screen = Box("#screen")
         << mesg;
     
+    auto bg = Background("pink");
+    auto bd = Border("rounded");
+    
+
+    auto en = Enabled(true);
+    
   // main box
   *this
     << QuitDialog("Quit","Changes will be lost", &changed)
@@ -60,10 +66,10 @@ ATM::ATM() : GWindow("#code-edit") {
         << Label(".label ATM ")
         << (HBox()
             << (VBox()
-                << (HBox("{border: rounded; display: flex;  flex-direction: column; }")
-                  << (VBox("{flex: column; align-items: flex-end;}") << Button("") << Button("") << Button() << Button())
-                  << screen
-                  << (VBox() << Button("") << Button("") << Button() << Button())
+                << (HBox("{align: stretch end;}")
+                    << (VBox() << Button("") << Button("") << Button() << Button())
+                    << screen
+                    << (VBox() << Button("") << Button("") << Button() << Button())
                     )
                 << HBox() << Label(".label Cash")
                 )
@@ -71,20 +77,26 @@ ATM::ATM() : GWindow("#code-edit") {
                 << (Button(".label RECEIPT")
                     << On.click / [=](GMouseEvent* e){ *mesg = "Print RECEIPT"; }
                     )
-                << (Button(".label CARD")
-//                    << On(~hasCard == true)  / "<c=red><i> Selected"
+                << (Button(".label CARD") << en
+//                    << (~hasCard == true)  / *en = false
 //                    << On(~hasCard == false) / "<c=blue> Deselected"
-                    << On.click / [=](GMouseEvent* e){ *mesg = "Card Inserted"; enable(false);}
+                    << On.click / [=](GMouseEvent* e){ *mesg = "Card Inserted"; *en = false;}
                         << Box()
                    )
                 )
             )
-        << (HBox("#keyboard")
-          << (VBox(".nobtn") << Button("1") << Button("4") << Button("7") << Button("*"))
-          << (VBox(".nobtn") << Button("2") << Button("5") << Button("8") << Button("0"))
-          << (VBox(".nobtn") << Button("3") << Button("6") << Button("9") << Button("#"))
-          << (VBox() << Button("CANCEL") << Button("CLEAR") << Button("ENTER") << Button())
-        )
+//        << (HBox("#keyboard")
+//          << (VBox(".nobtn") << Button("1") << Button("4") << Button("7") << Button("*"))
+//          << (VBox(".nobtn") << Button("2") << Button("5") << Button("8") << Button("0"))
+//          << (VBox(".nobtn") << Button("3") << Button("6") << Button("9") << Button("#"))
+//          << (VBox() << Button("CANCEL") << Button("CLEAR") << Button("ENTER") << Button())
+//        )
+        << (Box("#keyboard {flow: grid 4}")
+            << Button("1") << Button("2") << Button("3") << Button("CANCEL")
+            << Button("4") << Button("5") << Button("6") << (Button("CLEAR") << bg)
+            << Button("7") << Button("8") << Button("9") << (Button("ENTER") << Background("green"))
+            << Button("*") << Button("0") << Button("#") << Button()
+            )
     );
   
   makeInternal();   // disable inspection
