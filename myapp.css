@@ -1,0 +1,26 @@
+
+#myapp {
+  margin: 40; gap: 20;
+  icon: turtle.png;
+  font: 20 arial,sans-serif
+}
+
+#result {
+  img: turtle.png;
+  text: Hello World!;
+  font:bold;
+  size: auto 70; font: 30 arial,sans-serif
+}
+
+.entry    {color: purple; font: italic 20 arial,sans-serif}
+#entry1   {text: Choose Fruit:}
+#entry2   {text: Other Fruit:}
+
+#fruits   {flow: row; background:none}
+.apples   {icon: apples.png}
+.oranges  {icon: oranges.png}
+.mangoes  {icon: mangoes.png}
+
+Table     {gap: 20 10}
+TRow      {align: start end}
+TextField {background: wheat; size: 30ch}

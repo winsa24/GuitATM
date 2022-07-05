@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\guit\core\gcorereaction.cpp" />
+    <ClCompile Include="..\..\guit\gadgets\gadget.cpp" />
+    <ClCompile Include="..\..\guit\gui\gformula.cpp" />
+    <ClCompile Include="..\..\guit\gui\gprop.cpp" />
+    <ClCompile Include="..\..\guit\core\gadgetstyle.cpp" />
+    <ClCompile Include="..\..\guit\core\gcore.cpp" />
+    <ClCompile Include="..\..\guit\core\gcorednd.cpp" />
+    <ClCompile Include="..\..\guit\core\gcoreflow.cpp" />
+    <ClCompile Include="..\..\guit\core\gcoregeom.cpp" />
+    <ClCompile Include="..\..\guit\core\gcorehandle.cpp" />
+    <ClCompile Include="..\..\guit\core\gcorepack.cpp" />
+    <ClCompile Include="..\..\guit\core\gcorestyle.cpp" />
+    <ClCompile Include="..\..\guit\core\gfontbase.cpp" />
+    <ClCompile Include="..\..\guit\core\gpseudostyle.cpp" />
+    <ClCompile Include="..\..\guit\core\grender.cpp" />
+    <ClCompile Include="..\..\guit\core\gtextrender.cpp" />
+    <ClCompile Include="..\..\guit\gadgets\gbox.cpp" />
+    <ClCompile Include="..\..\guit\gadgets\gboxes.cpp" />
+    <ClCompile Include="..\..\guit\gadgets\gchart.cpp" />
+    <ClCompile Include="..\..\guit\gadgets\gdialog.cpp" />
+    <ClCompile Include="..\..\guit\gadgets\gfiledialog.cpp" />
+    <ClCompile Include="..\..\guit\gadgets\gitem.cpp" />
+    <ClCompile Include="..\..\guit\gadgets\gmenu.cpp" />
+    <ClCompile Include="..\..\guit\gadgets\gshape.cpp" />
+    <ClCompile Include="..\..\guit\gadgets\gslider.cpp" />
+    <ClCompile Include="..\..\guit\gadgets\gtable.cpp" />
+    <ClCompile Include="..\..\guit\gadgets\gtextitem.cpp" />
+    <ClCompile Include="..\..\guit\gadgets\gtransform.cpp" />
+    <ClCompile Include="..\..\guit\gadgets\gwindow.cpp" />
+    <ClCompile Include="..\..\guit\gui\gapp.cpp" />
+    <ClCompile Include="..\..\guit\gui\gevent.cpp" />
+    <ClCompile Include="..\..\guit\gui\ggraphics.cpp" />
+    <ClCompile Include="..\..\guit\gui\gobject.cpp" />
+    <ClCompile Include="..\..\guit\gui\gon.cpp" />
+    <ClCompile Include="..\..\guit\gui\gtheme.cpp" />
+    <ClCompile Include="..\..\guit\native\gnatsdl.cpp" />
+    <ClCompile Include="..\..\guit\native\gnatsocket.cpp" />
+    <ClCompile Include="..\..\guit\props\ganim.cpp" />
+    <ClCompile Include="..\..\guit\props\gborder.cpp" />
+    <ClCompile Include="..\..\guit\props\gchoice.cpp" />
+    <ClCompile Include="..\..\guit\props\gcolor.cpp" />
+    <ClCompile Include="..\..\guit\props\gcursor.cpp" />
+    <ClCompile Include="..\..\guit\props\gdata.cpp" />
+    <ClCompile Include="..\..\guit\props\gfont.cpp" />
+    <ClCompile Include="..\..\guit\props\gformat.cpp" />
+    <ClCompile Include="..\..\guit\props\gimg.cpp" />
+    <ClCompile Include="..\..\guit\props\glayout.cpp" />
+    <ClCompile Include="..\..\guit\props\gmargin.cpp" />
+    <ClCompile Include="..\..\guit\props\gnumber.cpp" />
+    <ClCompile Include="..\..\guit\props\gpos.cpp" />
+    <ClCompile Include="..\..\guit\props\gsize.cpp" />
+    <ClCompile Include="..\..\guit\props\gstatechart.cpp" />
+    <ClCompile Include="..\..\guit\props\gstates.cpp" />
+    <ClCompile Include="..\..\guit\props\gtag.cpp" />
+    <ClCompile Include="..\..\guit\props\gtext.cpp" />
+    <ClCompile Include="..\..\guit\props\gtimer.cpp" />
+    <ClCompile Include="..\..\guit\props\gtip-hotkey.cpp" />
+    <ClCompile Include="..\..\guit\util\gcodeblock.cpp" />
+    <ClCompile Include="..\..\guit\util\gcodereader.cpp" />
+    <ClCompile Include="..\..\guit\util\gfile.cpp" />
+    <ClCompile Include="..\..\guit\util\ginspector.cpp" />
+    <ClCompile Include="..\..\guit\util\greader.cpp" />
+    <ClCompile Include="..\..\guit\util\gsocket.cpp" />
+    <ClCompile Include="..\..\guit\util\gstring.cpp" />
+    <ClCompile Include="..\..\guit\util\gwriter.cpp" />
+    <ClCompile Include="..\myapp.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\guit\core\gadgetstyle.hpp" />
+    <ClInclude Include="..\..\guit\core\gcore.hpp" />
+    <ClInclude Include="..\..\guit\core\gcorecontext.hpp" />
+    <ClInclude Include="..\..\guit\core\gcoreflow.hpp" />
+    <ClInclude Include="..\..\guit\core\gcoregeom.hpp" />
+    <ClInclude Include="..\..\guit\core\gcorehandle.hpp" />
+    <ClInclude Include="..\..\guit\core\gcorereaction.hpp" />
+    <ClInclude Include="..\..\guit\core\gcorestyle.hpp" />
+    <ClInclude Include="..\..\guit\core\gfontbase.hpp" />
+    <ClInclude Include="..\..\guit\core\gimpl.hpp" />
+    <ClInclude Include="..\..\guit\core\gperf.hpp" />
+    <ClInclude Include="..\..\guit\core\grender.hpp" />
+    <ClInclude Include="..\..\guit\core\gtextrender.hpp" />
+    <ClInclude Include="..\..\guit\gadgets\gadd.hpp" />
+    <ClInclude Include="..\..\guit\gadgets\gadget.hpp" />
+    <ClInclude Include="..\..\guit\gadgets\gbox.hpp" />
+    <ClInclude Include="..\..\guit\gadgets\gboxes.hpp" />
+    <ClInclude Include="..\..\guit\gadgets\gchart.hpp" />
+    <ClInclude Include="..\..\guit\gadgets\gcompstyle.hpp" />
+    <ClInclude Include="..\..\guit\gadgets\gdialog.hpp" />
+    <ClInclude Include="..\..\guit\gadgets\gfiledialog.hpp" />
+    <ClInclude Include="..\..\guit\gadgets\gitem.hpp" />
+    <ClInclude Include="..\..\guit\gadgets\gmenu.hpp" />
+    <ClInclude Include="..\..\guit\gadgets\gmodes.hpp" />
+    <ClInclude Include="..\..\guit\gadgets\gshape.hpp" />
+    <ClInclude Include="..\..\guit\gadgets\gslider.hpp" />
+    <ClInclude Include="..\..\guit\gadgets\gtable.hpp" />
+    <ClInclude Include="..\..\guit\gadgets\gtextitem.hpp" />
+    <ClInclude Include="..\..\guit\gadgets\gtransform.hpp" />
+    <ClInclude Include="..\..\guit\gadgets\gwindow.hpp" />
+    <ClInclude Include="..\..\guit\gui\gapp.hpp" />
+    <ClInclude Include="..\..\guit\gui\gevent.hpp" />
+    <ClInclude Include="..\..\guit\gui\geventflow.hpp" />
+    <ClInclude Include="..\..\guit\gui\geventtypes.hpp" />
+    <ClInclude Include="..\..\guit\gui\gformula.hpp" />
+    <ClInclude Include="..\..\guit\gui\ggraphics.hpp" />
+    <ClInclude Include="..\..\guit\gui\gobject.hpp" />
+    <ClInclude Include="..\..\guit\gui\gon.hpp" />
+    <ClInclude Include="..\..\guit\gui\gprop.hpp" />
+    <ClInclude Include="..\..\guit\gui\gptr.hpp" />
+    <ClInclude Include="..\..\guit\gui\gtheme.hpp" />
+    <ClInclude Include="..\..\guit\gui\gtrigger.hpp" />
+    <ClInclude Include="..\..\guit\gui\gtypes.hpp" />
+    <ClInclude Include="..\..\guit\gui\guit.hpp" />
+    <ClInclude Include="..\..\guit\native\gmactouch.hpp" />
+    <ClInclude Include="..\..\guit\native\gnative.hpp" />
+    <ClInclude Include="..\..\guit\native\gnatsdl.hpp" />
+    <ClInclude Include="..\..\guit\native\gnatsocket.hpp" />
+    <ClInclude Include="..\..\guit\props\galign.hpp" />
+    <ClInclude Include="..\..\guit\props\ganim.hpp" />
+    <ClInclude Include="..\..\guit\props\gbool.hpp" />
+    <ClInclude Include="..\..\guit\props\gborder.hpp" />
+    <ClInclude Include="..\..\guit\props\gchoice.hpp" />
+    <ClInclude Include="..\..\guit\props\gcolor.hpp" />
+    <ClInclude Include="..\..\guit\props\gcursor.hpp" />
+    <ClInclude Include="..\..\guit\props\gdata.hpp" />
+    <ClInclude Include="..\..\guit\props\gflex.hpp" />
+    <ClInclude Include="..\..\guit\props\gflow.hpp" />
+    <ClInclude Include="..\..\guit\props\gfont.hpp" />
+    <ClInclude Include="..\..\guit\props\gformat.hpp" />
+    <ClInclude Include="..\..\guit\props\ggap.hpp" />
+    <ClInclude Include="..\..\guit\props\gimg.hpp" />
+    <ClInclude Include="..\..\guit\props\gmargin.hpp" />
+    <ClInclude Include="..\..\guit\props\gnumber.hpp" />
+    <ClInclude Include="..\..\guit\props\gpos.hpp" />
+    <ClInclude Include="..\..\guit\props\gsize.hpp" />
+    <ClInclude Include="..\..\guit\props\gstatechart.hpp" />
+    <ClInclude Include="..\..\guit\props\gstates.hpp" />
+    <ClInclude Include="..\..\guit\props\gtag.hpp" />
+    <ClInclude Include="..\..\guit\props\gtext.hpp" />
+    <ClInclude Include="..\..\guit\props\gtimer.hpp" />
+    <ClInclude Include="..\..\guit\props\gtip-hotkey.hpp" />
+    <ClInclude Include="..\..\guit\util\gcodeblock.hpp" />
+    <ClInclude Include="..\..\guit\util\gcodereader.hpp" />
+    <ClInclude Include="..\..\guit\util\gfile.hpp" />
+    <ClInclude Include="..\..\guit\util\ginspector.hpp" />
+    <ClInclude Include="..\..\guit\util\greader.hpp" />
+    <ClInclude Include="..\..\guit\util\gsocket.hpp" />
+    <ClInclude Include="..\..\guit\util\gstring.hpp" />
+    <ClInclude Include="..\..\guit\util\gwriter.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\GuitDemo\examples\animations.css" />
+    <None Include="..\..\GuitDemo\examples\drawing.css" />
+    <None Include="..\..\GuitDemo\examples\microwave.css" />
+    <None Include="..\..\GuitDemo\examples\opengl.css" />
+    <None Include="..\..\GuitDemo\examples\styles.css" />
+    <None Include="..\..\GuitDemo\tutorial\tutorial.css" />
+    <None Include="..\..\guit\native\gmactouch.mm" />
+    <None Include="..\..\guit\native\gsdlcocoa.mm" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{8a027568-1a27-4029-918c-6c4fd61e0eea}</ProjectGuid>
+    <RootNamespace>examples</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level1</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\guit\core;$(SolutionDir)..\..\guit\gui;$(SolutionDir)..\..\guit\gadgets;$(SolutionDir)..\..\guit\props;$(SolutionDir)..\..\guit\native;$(SolutionDir)..\..\SDL2\include;$(SolutionDir)..\..\guit\util;$(SolutionDir)..\..\GuitDemo\examples\headers;$(SolutionDir)..\..\GuitDemo\tutorial;$(SolutionDir)..\..\GuitDemo\overview;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\..\SDL2\lib32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2_ttf.lib;SDL2_image.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

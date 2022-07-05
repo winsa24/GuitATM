@@ -1,0 +1,6 @@
+
+\rm -r .vs/examples/v16/ipch
+\rm .vs/examples/v16/Browse.VC.db
+\rm -r Debug
+
+ 

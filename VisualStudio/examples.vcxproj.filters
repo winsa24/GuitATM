@@ -1,0 +1,494 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Fichiers de ressources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Fichiers sources\src">
+      <UniqueIdentifier>{08530380-b4dc-408e-b477-0912456e21f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\lib">
+      <UniqueIdentifier>{f2cc7455-d9d6-4812-ac71-bb60df0e3f99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\css">
+      <UniqueIdentifier>{1bab70b2-5834-4819-8e8a-1f1363977716}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\guit\core\gadgetstyle.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\props\ganim.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\gui\gapp.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\props\gborder.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\gadgets\gbox.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\gadgets\gboxes.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\gadgets\gchart.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\props\gchoice.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\util\gcodeblock.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\util\gcodereader.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\props\gcolor.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\core\gcore.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\core\gcorednd.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\core\gcoreflow.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\core\gcoregeom.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\core\gcorehandle.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\core\gcorepack.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\core\gcorestyle.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\props\gcursor.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\props\gdata.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\gadgets\gdialog.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\gui\gevent.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\util\gfile.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\gadgets\gfiledialog.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\props\gfont.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\core\gfontbase.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\props\gformat.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\gui\ggraphics.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\props\gimg.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\util\ginspector.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\gadgets\gitem.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\props\glayout.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\props\gmargin.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\gadgets\gmenu.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\native\gnatsdl.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\native\gnatsocket.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\props\gnumber.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\gui\gobject.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\gui\gon.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\props\gpos.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\core\gpseudostyle.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\util\greader.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\core\grender.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\gadgets\gshape.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\props\gsize.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\gadgets\gslider.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\util\gsocket.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\props\gstatechart.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\props\gstates.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\util\gstring.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\gadgets\gtable.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\props\gtag.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\props\gtext.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\gadgets\gtextitem.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\core\gtextrender.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\gui\gtheme.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\props\gtimer.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\props\gtip-hotkey.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\gadgets\gtransform.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\gadgets\gwindow.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\util\gwriter.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\gui\gformula.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\gui\gprop.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\core\gcorereaction.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\myapp.cpp">
+      <Filter>Fichiers sources\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\guit\gadgets\gadget.cpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\guit\core\gcorehandle.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\core\gcorestyle.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\gadgets\gdialog.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\gui\gevent.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\gui\geventflow.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\gui\geventtypes.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\gadgets\gfiledialog.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\core\gfontbase.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\gui\ggraphics.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\core\gimpl.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\gadgets\gitem.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\gadgets\gmenu.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\gadgets\gmodes.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\gui\gobject.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\gui\gon.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\core\gperf.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\gui\gptr.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\core\grender.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\gadgets\gshape.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\gadgets\gslider.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\gadgets\gtable.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\gadgets\gtextitem.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\core\gtextrender.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\gui\gtheme.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\gadgets\gtransform.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\gui\gtrigger.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\gui\gtypes.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\gui\guit.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\gadgets\gwindow.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\gadgets\gadd.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\gadgets\gadget.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\core\gadgetstyle.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\props\galign.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\props\ganim.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\gui\gapp.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\props\gbool.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\props\gborder.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\gadgets\gbox.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\gadgets\gboxes.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\gadgets\gchart.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\props\gchoice.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\util\gcodeblock.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\util\gcodereader.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\props\gcolor.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\gadgets\gcompstyle.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\core\gcore.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\core\gcorecontext.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\core\gcoreflow.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\core\gcoregeom.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\props\gcursor.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\props\gdata.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\util\gfile.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\props\gflex.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\props\gflow.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\props\gfont.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\props\gformat.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\props\ggap.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\props\gimg.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\util\ginspector.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\native\gmactouch.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\props\gmargin.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\native\gnative.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\native\gnatsdl.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\native\gnatsocket.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\props\gnumber.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\props\gpos.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\util\greader.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\props\gsize.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\util\gsocket.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\props\gstatechart.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\props\gstates.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\util\gstring.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\props\gtag.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\props\gtext.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\props\gtimer.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\props\gtip-hotkey.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\util\gwriter.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\gui\gformula.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\gui\gprop.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\guit\core\gcorereaction.hpp">
+      <Filter>Fichiers sources\lib</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\GuitDemo\examples\animations.css">
+      <Filter>Fichiers sources\css</Filter>
+    </None>
+    <None Include="..\..\GuitDemo\examples\drawing.css">
+      <Filter>Fichiers sources\css</Filter>
+    </None>
+    <None Include="..\..\GuitDemo\examples\microwave.css">
+      <Filter>Fichiers sources\css</Filter>
+    </None>
+    <None Include="..\..\GuitDemo\examples\opengl.css">
+      <Filter>Fichiers sources\css</Filter>
+    </None>
+    <None Include="..\..\GuitDemo\examples\styles.css">
+      <Filter>Fichiers sources\css</Filter>
+    </None>
+    <None Include="..\..\GuitDemo\tutorial\tutorial.css">
+      <Filter>Fichiers sources\css</Filter>
+    </None>
+    <None Include="..\..\guit\native\gmactouch.mm">
+      <Filter>Fichiers sources\lib</Filter>
+    </None>
+    <None Include="..\..\guit\native\gsdlcocoa.mm">
+      <Filter>Fichiers sources\lib</Filter>
+    </None>
+  </ItemGroup>
+</Project>
