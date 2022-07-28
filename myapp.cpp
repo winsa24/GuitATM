@@ -30,26 +30,29 @@ public:
       auto exit  = State(init);
       auto withdraw    = State(init);
       auto deposit     = State(init);
+      auto contd = State(init);
+      auto contw = State(init);
 
       auto display = Label("Welcome")
       << On(~idle == true)         / ("Please insert a card")
       << On(~auth == true)    / ("Please enter password")
       << On(~ops == true)  / ("Select operation")
       << On(~exit == true)    / ("Safely Exit")
-      << On(~withdraw == true)     / ("Withdraw")
-      << On(~deposit == true)  / ("Deposit");
+      << On(~withdraw == true || ~contw == true)     / ("Withdraw")
+      << On(~deposit == true || ~contd == true)  / ("Deposit");
 
       auto mesg = Label("Welcome");
       auto psw = Text();
       auto err = Text();
       auto sideTextL = VBox();
       auto sideTextR = VBox();
+      auto btntext = Text();
       
       auto screen = Box("#screen {flow: column; align: stretch stretch;}")
           << display
-          << mesg
-          << psw
-          << (Label() << err)
+          << On(~auth == true || ~withdraw == true)  / mesg
+          << On(~auth == true)  / psw
+          << On(~auth == true)  / (Label() << err)
           << (HBox("{flow: row; align: stretch end;}")
               << sideTextL
               << Box()
@@ -66,9 +69,6 @@ public:
       auto cashBox = Box();
       auto cashCount = Int();
 
-      auto interactMoney = [=](auto e){
-          
-      };
       auto cancelBtn = [=](auto e){
           sideTextL->removeChildren();
           sideTextR->removeChildren();
@@ -84,8 +84,6 @@ public:
       };
     //auto depositMoney = [=](auto e){    //elc: (auto e) not needed
       auto depositMoney = [=]{
-          *mesg = "deposit";
-          cashBox << bg << bd << interactMoney;
           sideTextL->removeChildren();
           sideTextR->removeChildren();
           sideTextL << "Cancel";
@@ -93,46 +91,106 @@ public:
       };
     //auto withdrawMoney = [=](auto e){
       auto withdrawMoney = [=]{
-          screen->remove(psw);
           *mesg = "Select the amount of money";
           sideTextL->removeChildren();
           sideTextR->removeChildren();
           sideTextL << "10" << "20" << "50" << "Cancel";
-          sideTextR << "100" << "300" << "Others" << "";
+          sideTextR << "100" << "300" << "500" << "Others";
       };
       
       
      *this
 //      << QuitDialog("Quit","Changes will be lost", &changed)
       << (VBox(".window {align: stretch stretch;}")
-          << Guard(~wrongCount > 3)  / (auth >> idle)
           << Label(".label ATM ")
           << (HBox()
               << (VBox()
                   << (HBox("{align: stretch end;}")
                       << (VBox()
-                          << Button("") << Button() << Button()
+                          << (Button()
+                              << Guard(~withdraw == true)
+                              / (withdraw >> contw)
+                              / confirmBtn
+                              )
+                          << (Button()
+                              << Guard(~withdraw == true)
+                              / (withdraw >> contw)
+                              / confirmBtn
+                              )
+                          << (Button()
+                              << Guard(~withdraw == true)
+                              / (withdraw >> contw)
+                              / confirmBtn
+                              )
                           // << (Button("{#deposit}") << (ops >> deposit) << depositMoney)
                           // elc: / means sequence => depositMoney called only if transition fired
-                          << (Button("#deposit") << (ops >> deposit) / depositMoney)
+                          << (Button()
+                              << Guard(~deposit == true)
+                              / (deposit >> ops)
+                              / cancelBtn
+                              << Guard(~withdraw == true)
+                              / (withdraw >> ops)
+                              / cancelBtn
+                              << Guard(~ops == true)
+                              / (ops >> deposit)
+                              / depositMoney
+                              << Guard(~contd == true)
+                              / (contd >> ops)
+                              / cancelBtn
+                              << Guard(~contw == true)
+                              / (contw >> ops)
+                              / cancelBtn
+                              )
                           )
                       << screen
                       << (VBox()
-                          << Button("") << Button("") << Button()
+                          << (Button()
+                              << Guard(~withdraw == true)
+                              / (withdraw >> contw)
+                              / confirmBtn
+                              )
+                          << (Button()
+                              << Guard(~withdraw == true)
+                              / (withdraw >> contw)
+                              / confirmBtn
+                              )
+                          << (Button()
+                              << Guard(~withdraw == true)
+                              / (withdraw >> contw)
+                              / confirmBtn
+                              )
                           // << (Button("{#withdraw}") << (ops >> withdraw) << withdrawMoney)
-                          << (Button("#withdraw") << (ops >> withdraw) / withdrawMoney)
+                          << (Button()
+                              << Guard(~deposit == true)
+                              / (deposit >> contd)
+                              / confirmBtn
+                              << Guard(~withdraw == true)
+                              / (withdraw >> contw)
+                              / confirmBtn
+                              << Guard(~ops == true)
+                              / (ops >> withdraw)
+                              / withdrawMoney
+                              << Guard(~contd == true)
+                              / (contd >> deposit)
+                              / depositMoney
+                              << Guard(~contw == true)
+                              / (contw >> withdraw)
+                              / withdrawMoney
+                              )
                           )
                       )
                   << (VBox()
                       << Label(".label Cash")
                       << cashBox
+                      << On( ~contw == true || ~deposit == true)     / [=]{cashBox << bg << bd;}
+                      << On(~ops == true || ~withdraw == true || ~contd == true ) / [=]{cashBox << Background("white");}
                       )
                   )
               << (VBox()
                   << (Button(".label RECEIPT")
                       << en
                       // << On.click / [=](GMouseEvent* e){ *mesg = "Print RECEIPT"; }
-                      << On.click / [=]{ *mesg = "Print RECEIPT"; }  // elc: GMouseEvent not needed
+                      << On.click / [=]{ *display= "Print RECEIPT"; ~ops == true;}  // elc: GMouseEvent not needed
                       )
                   << (Button(".label CARD")
                       << (idle >> auth)  // is working
@@ -161,6 +219,8 @@ public:
                   << Button("*") << Button("0") << (Button("\\#") << []{})
                   )
               << (Box("#funboard {flow: grid 1}")
+                  << On(~auth == true)   / Enabled(true)  //elc
+                  << On(~idle == true)   / Enabled(false) //elc
                   << (Button("CANCEL") << Background("yellow") << [=](auto e){ psw->erase(psw->stringValue().size() - 1, 1); })
                   << (Button("CLEAR") << bg << [=](auto e){ *psw = ""; })
                   << (Button("ENTER") << Background("green")
@@ -182,9 +242,12 @@ public:
                       << Guard(~psw == ~userPsw)
                       / (auth >> ops)
                       / [=]{*mesg = "<color=green> Login Successfully"; *psw = "";}
+                      / cancelBtn
 
                       << Guard(~psw != ~userPsw)
                       / [=]{++ wrongCount; *err = "Left " + std::to_string(4 - *wrongCount) + " Attempts"; *psw = "";}
+                      
+                      << Guard(~wrongCount > 3)  / (auth >> idle)
                       )
                   << Button("")
                   )
