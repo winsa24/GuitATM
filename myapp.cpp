@@ -46,18 +46,18 @@ public:
       auto err = Text();
       auto sideTextL = VBox();
       auto sideTextR = VBox();
-      auto btntext = Text();
+      auto opsBox = (HBox("{flow: row; align: stretch end;}")
+                    << sideTextL
+                    << Box()
+                    << sideTextR
+                     );
       
       auto screen = Box("#screen {flow: column; align: stretch stretch;}")
           << display
           << On(~auth == true || ~withdraw == true)  / mesg
           << On(~auth == true)  / psw
           << On(~auth == true)  / (Label() << err)
-          << (HBox("{flow: row; align: stretch end;}")
-              << sideTextL
-              << Box()
-              << sideTextR
-              );
+          << opsBox;
      
       
       auto bg = Background("pink");
@@ -72,8 +72,8 @@ public:
       auto cancelBtn = [=](auto e){
           sideTextL->removeChildren();
           sideTextR->removeChildren();
-          sideTextL << "Deposit";
-          sideTextR << "Withdraw";
+          sideTextL << "Deposit" << "" << "" << "End";
+          sideTextR << "Withdraw" << "" << "" << "";
       };
       auto confirmBtn = [=](auto e){
           *en = true;
@@ -95,7 +95,14 @@ public:
           sideTextL->removeChildren();
           sideTextR->removeChildren();
           sideTextL << "10" << "20" << "50" << "Cancel";
-          sideTextR << "100" << "300" << "500" << "Others";
+          sideTextR << "100" << "300" << "500" << "1000";
+      };
+      
+      auto reIdle = [=]{
+          *wrongCount = 0;
+          *err = "";
+          sideTextL->removeChildren();
+          sideTextR->removeChildren();
       };
       
       
@@ -108,6 +115,9 @@ public:
                   << (HBox("{align: stretch end;}")
                       << (VBox()
                           << (Button()
+                              << Guard(~ops == true)
+                              / (ops >> deposit)
+                              / depositMoney
                               << Guard(~withdraw == true)
                               / (withdraw >> contw)
                               / confirmBtn
@@ -125,15 +135,15 @@ public:
                           // << (Button("{#deposit}") << (ops >> deposit) << depositMoney)
                           // elc: / means sequence => depositMoney called only if transition fired
                           << (Button()
+                              << Guard(~ops == true)
+                              / (ops >> idle)
+                              / reIdle
                               << Guard(~deposit == true)
                               / (deposit >> ops)
                               / cancelBtn
                               << Guard(~withdraw == true)
                               / (withdraw >> ops)
                               / cancelBtn
-                              << Guard(~ops == true)
-                              / (ops >> deposit)
-                              / depositMoney
                               << Guard(~contd == true)
                               / (contd >> ops)
                               / cancelBtn
@@ -145,6 +155,9 @@ public:
                       << screen
                       << (VBox()
                           << (Button()
+                              << Guard(~ops == true)
+                              / (ops >> withdraw)
+                              / withdrawMoney
                               << Guard(~withdraw == true)
                               / (withdraw >> contw)
                               / confirmBtn
@@ -167,9 +180,6 @@ public:
                               << Guard(~withdraw == true)
                               / (withdraw >> contw)
                               / confirmBtn
-                              << Guard(~ops == true)
-                              / (ops >> withdraw)
-                              / withdrawMoney
                               << Guard(~contd == true)
                               / (contd >> deposit)
                               / depositMoney
@@ -247,7 +257,7 @@ public:
                       << Guard(~psw != ~userPsw)
                       / [=]{++ wrongCount; *err = "Left " + std::to_string(4 - *wrongCount) + " Attempts"; *psw = "";}
                       
-                      << Guard(~wrongCount > 3)  / (auth >> idle)
+                      << Guard(~wrongCount > 3)  / (auth >> idle) / reIdle
                       )
                   << Button("")
                   )
