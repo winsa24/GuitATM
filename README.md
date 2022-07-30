@@ -1,1 +1,2 @@
 # GuitATM
+Run `myapp.xcodeproj`    
